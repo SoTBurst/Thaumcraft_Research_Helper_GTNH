@@ -164,8 +164,8 @@ function calculate() {
                                 if (aspectLinks[path2[path2.length - 1]].includes(document.getElementById('endAspect2').value)) {
                                     path2.push(document.getElementById('endAspect2').value);
 
-                                    makeResult(document.getElementById('result'), path, "Mainkette: ");
-                                    makeResult(document.getElementById('result2'), path2, "Nebenkette: ");
+                                    makeResult(document.getElementById('result'), path, "Mainchain: ");
+                                    makeResult(document.getElementById('result2'), path2, "Nebenchain: ");
                                     break secBreakpoint;
                                 }
                             }
