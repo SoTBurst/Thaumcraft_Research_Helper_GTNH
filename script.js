@@ -143,7 +143,7 @@ function calculate() {
     // I have no fucking clue...
     // steps = steps - 1;
 
-    secBreakpoint: while (steps < 100) {
+    secBreakpoint: while (steps < 16) {
         for (let counter = 0; counter < 1000000; counter++) {
             const path = [document.getElementById('startAspect').value];
 
@@ -180,7 +180,9 @@ function calculate() {
         console.log("No Solution, one step more...");
         steps++;
     }
-
+    if (steps >= 16) {
+        document.getElementById('result').innerHTML = "No Solution";
+    }
 
 }
 
