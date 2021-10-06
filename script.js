@@ -161,13 +161,13 @@ function calculate() {
                             const path2 = [path[startPosition]];
                             for (let i = 1; i < steps2 + 1; i++) {
                                 path2[i] = aspectLinks[path2[i - 1]][getRandomInt(aspectLinks[path2[i - 1]].length)];
-                                if (aspectLinks[path2[path2.length - 1]].includes(document.getElementById('endAspect2').value)) {
-                                    path2.push(document.getElementById('endAspect2').value);
+                            }
+                            if (aspectLinks[path2[path2.length - 1]].includes(document.getElementById('endAspect2').value)) {
+                                path2.push(document.getElementById('endAspect2').value);
 
-                                    makeResult(document.getElementById('result'), path, "Mainchain: ");
-                                    makeResult(document.getElementById('result2'), path2, "Nebenchain: ");
-                                    break secBreakpoint;
-                                }
+                                makeResult(document.getElementById('result'), path, "Mainchain: ");
+                                makeResult(document.getElementById('result2'), path2, "2nd chain: ");
+                                break secBreakpoint;
                             }
                         }
                     }
